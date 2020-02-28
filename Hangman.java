@@ -12,10 +12,10 @@ public class Hangman implements IHangman {
     private int maxWrong = 8;
     private String General;
     private char[] letterArray;
-    final int noWordsRead = 340;//number of words to read from file
+    final int noWordsRead = 340;
 
 
-  public String[] readFile(String fileName)  {//function to read file to words array
+  public String[] readFile(String fileName)  {
       String[] words = new String [noWordsRead];
       FileReader fileReader;
       try {
@@ -40,7 +40,7 @@ public class Hangman implements IHangman {
       return words;
 
   }
-    public void setDictionary(String[] words) {//will set dictionary  using read file function
+    public void setDictionary(String[] words) {
         dictionary = words;
 
         letterArray = new char[selectRandomSecretWord().length()];
